@@ -19,13 +19,16 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       </div>
       <nav className="my-8 grid grid-cols-4 gap-4">
         <NavLink href={'/'}>About</NavLink>
-        <NavLink href={'/'}>Products</NavLink>
+        <NavLink href={'/products'}>Products</NavLink>
         <NavLink href={'/'}>Blog</NavLink>
         <NavLink href={'/resume.pdf'}>Resume</NavLink>
       </nav>
       {children}
       <footer className="sticky bottom-0 left-4 bg-stone-100 text-xl font-semibold md:fixed">
-        <a href="" className="text-sm font-bold leading-none">
+        <a
+          href="https://chrome.google.com/webstore/detail/farseer-ai/hhgpeoclflbmfakikhjenjahcmgdlkoh?hl=en&authuser=0"
+          className="text-sm font-bold leading-none"
+        >
           <ArrowUpRightIcon width={65} />
           latest hack
         </a>
