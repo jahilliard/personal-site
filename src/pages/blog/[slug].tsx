@@ -1,116 +1,68 @@
 import { ReactElement, ReactNode } from 'react'
-import { Layout } from '@/components/Layout'
-import markdownStyles from '@/styles/markdown-styles.module.css'
-import { useRouter } from 'next/router'
-import  { markdownToHtml, getAllPosts, getPostBySlug, Post } from '@/utils'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-const PostTitle = ({ children }: {
-  children?: ReactNode
-}) => {
+import { Layout } from '@/components/Layout'
+import { getAllPosts, getPostBySlug, markdownToHtml, Post } from '@/utils'
+
+import markdownStyles from '@/styles/markdown-styles.module.css'
+
+const PostTitle = ({ children }: { children?: ReactNode }) => {
   return (
-    <h1 className="text-6xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+    <h1 className="mb-12 text-center text-6xl font-bold leading-tight tracking-tighter md:text-left md:leading-none">
       {children}
     </h1>
   )
 }
 
-const PostBody = ({ content }: {
-  content: string
-}) => {
+const PostBody = ({ content }: { content: string }) => {
   return (
-    <div className="max-w-2xl mx-auto">
-      <div
-        className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+    <div className="mx-auto max-w-2xl">
+      <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   )
 }
 
-const PostHeader = ({ title, coverImage, date }: {
-  title: string
-  coverImage: string
-  date: string
-  // author: Author
-}) => {
-  return (
-    <>
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        {/* <Avatar name={author.name} picture={author.picture} /> */}
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        {/* <CoverImage title={title} src={coverImage} /> */}
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          {/* <Avatar name={author.name} picture={author.picture} /> */}
-        </div>
-        <div className="mb-6 text-lg">
-          {/* <DateFormatter dateString={date} /> */}
-        </div>
-      </div>
-    </>
-  )
+const PostHeader = ({ title, date }: { title: string; date: string }) => {
+  return <PostTitle>{title}</PostTitle>
 }
 
-export default function PostPage({ post }: {
-  post: Post
-  // morePosts: Post[]
-  // preview?: boolean
-}) {
+export default function PostPage({ post }: { post: Post }) {
   const router = useRouter()
   return (
+    <>
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
         <>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{post.title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                // author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
+          <article className="mb-32">
+            <Head>
+              <title>{post.title}</title>
+              <meta property="og:image" content={post.ogImage.url} />
+            </Head>
+            <PostHeader title={post.title} date={post.date} />
+            <PostBody content={post.content} />
+          </article>
+        </>
+      )}
     </>
   )
 }
-
 
 PostPage.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 
-
-export async function getStaticProps({ params }: {
+export async function getStaticProps({
+  params,
+}: {
   params: {
     slug: string
   }
 }) {
-  console.log(params.slug)
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-  ])
+  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'ogImage'])
 
   const content = await markdownToHtml(post.content || '')
-  
-  console.log(content)
 
   return {
     props: {
