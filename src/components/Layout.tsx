@@ -20,7 +20,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       <nav className="my-8 grid grid-cols-4 gap-4">
         <NavLink href={'/'}>About</NavLink>
         <NavLink href={'/products'}>Products</NavLink>
-        <NavLink href={'/'}>Blog</NavLink>
+        <NavLink href={'/blog'}>Blog</NavLink>
         <NavLink href={'/resume.pdf'}>Resume</NavLink>
       </nav>
       {children}

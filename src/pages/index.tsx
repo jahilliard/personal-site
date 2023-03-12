@@ -1,8 +1,11 @@
 import { ReactElement } from 'react'
 
 import { Layout } from '@/components/Layout'
+import { Bullet } from '@/components/utils'
 
 // next -> https://render.com/docs/custom-domains
+
+
 
 export default function Home() {
   return (
@@ -17,17 +20,17 @@ export default function Home() {
         <ul className="space-y-2 text-lg font-medium">
           <li>
             <a href="https://twitter.com/jahilliar">
-              <span className="pr-4 text-2xl">🐦</span> Twitter
+              <Bullet emoji={"🐦"} /> Twitter
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/jhilliard1/">
-              <span className="pr-4 text-2xl">💼</span> Linkedin
+              <Bullet emoji={"💼"} /> Linkedin
             </a>
           </li>
           <li>
             <a href="mailto:justin.a.hilliard@gmail.com">
-              <span className="pr-4 text-2xl">💌</span> Email
+              <Bullet emoji={"💌"} /> Email
             </a>
           </li>
         </ul>
