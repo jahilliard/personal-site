@@ -16,3 +16,7 @@
   .markdown h3 {
     @apply text-xl mt-8 mb-4 leading-snug;
   }
+
+  .markdown pre {
+    @apply bg-neutral-200 rounded p-4 whitespace-pre-wrap	 mt-8 mb-4 leading-snug;
+  }
