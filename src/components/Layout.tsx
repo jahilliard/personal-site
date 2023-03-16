@@ -25,12 +25,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       </nav>
       {children}
       <footer className="sticky bottom-0 left-4 bg-stone-100 text-xl font-semibold md:fixed">
-        <a
-          href="https://chrome.google.com/webstore/detail/farseer-ai/hhgpeoclflbmfakikhjenjahcmgdlkoh?hl=en&authuser=0"
-          className="text-sm font-bold leading-none"
-        >
+        <a href="https://twitter.com/jahilliar" className="text-sm font-bold leading-none">
           <ArrowUpRightIcon width={65} />
-          latest hack
+          my twitter
         </a>
       </footer>
     </main>
