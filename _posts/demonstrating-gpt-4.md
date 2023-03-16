@@ -12,7 +12,7 @@ For those of you that didn't see my [previous post](https://jahilliard.com/blog/
 
 With the announcement of GPT-4, I decided to rerun the blog prompt with the new model. GPT-3 wasn't good enough, plain and simple.  But over the past few days, I have been using GPT-4 ~100/day.  At this point, it's become a drop in replacement for google.
 
- Although, It does lack my personality, writing style, and tone. The results were staggering. Notably, the "how" had a much larger impact with GPT-4.  Since the results speak for themselve, I won't belabor the point.
+ Although, It does lack my personality, writing style, and tone. The results were staggering. Notably, the "how" had a much larger impact with GPT-4.  Since the results speak for themselves, I won't belabor the point.
 
 TLDR - With GPT4, I revise my previous conclusion.  The prompt was worth writing. The output far exceeded what I could have achieved myself. 
 
