@@ -49,7 +49,7 @@ Start the story describing a moment the founder experienced right after launchin
 End the story by explaining how easy it is to make excuses to yourself about why you haven't launched a product. While not the easy way out, the Y-Combinator advice is what I should have followed from the beginning. Do not say, In conclusion.
 ```
 
-### The Result
+### The Result - GPT-3.5
 
 ```
 I sat at my desk, staring blankly at my computer screen, feeling a mix of frustration and exhaustion. Each time I launched Functionary, my marketing software, users weren't interested. I had launched three times, once every two months.  I wanted to go faster, but working solo meant that I didn't have the bandwidth to both grow and improve the product quickly enough to make it a success.
@@ -63,10 +63,9 @@ That was the beginning of Farseer, an GPT powered webpage scraper that let users
 Through my experience with Functionary and Farseer, I learned the importance of launching quickly and continuously. It's easy to make excuses for why you haven't launched a product, but the Y-Combinator advice is what I should have followed from the beginning: launch early and iterate often. While it's not the easy way out, it's the best way to build a successful product.
 ```
 
-### The Result w/o the How
+### w/o the How
 
 ```
-
 As a startup founder, I've learned that launching quickly and continuously is crucial for success. I learned this the hard way with my first product, Functionary. Despite launching it three times, it failed because it took too long to launch each time and I didn't have enough bandwidth to both grow and improve the product quickly enough.
 
 However, I didn't let the failure of Functionary stop me. I teamed up with a friend I met in college and launched our second product, Farseer, within a week. We were able to get our first user by the end of the second week. By talking to users and incorporating their feedback, we were able to iterate quickly and create a product that people actually wanted.
