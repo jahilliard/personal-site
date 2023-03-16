@@ -17,6 +17,10 @@
     @apply text-xl mt-8 mb-4 leading-snug;
   }
 
+  .markdown a {
+    @apply text-blue-600 underline;
+  }
+
   .markdown pre {
     @apply bg-neutral-200 rounded p-4 whitespace-pre-wrap	 mt-8 mb-4 leading-snug;
   }
