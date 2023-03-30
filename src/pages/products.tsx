@@ -10,24 +10,33 @@ export default function Products() {
     <>
       <ul className="space-y-2 text-xl font-medium">
         <li>
+          <a href="https://birdfeed.ai">
+            <Bullet emoji={'🛠️'} />
+            Birdfeed
+          </a>
+        </li>
+        <li>
           <a href="https://chrome.google.com/webstore/detail/farseer-ai/hhgpeoclflbmfakikhjenjahcmgdlkoh?hl=en&authuser=0">
-            <Bullet emoji={"🛠️"} />
+            <Bullet emoji={'🛠️'} />
             Farseer
           </a>
         </li>
         <li>
           <a href="https://functionary.run">
-            <Bullet emoji={"🛠️"} />Functionary
+            <Bullet emoji={'🛠️'} />
+            Functionary
           </a>
         </li>
         <li>
           <a href="https://superwall.com">
-            <Bullet emoji={"🛠️"} />Superwall
+            <Bullet emoji={'🛠️'} />
+            Superwall
           </a>
         </li>
         <li>
           <a href="https://staffbar.com">
-            <Bullet emoji={"🛠️"} />Staffbar
+            <Bullet emoji={'🛠️'} />
+            Staffbar
           </a>
         </li>
       </ul>
