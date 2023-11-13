@@ -12,7 +12,7 @@ export default function Home() {
       <article className="space-y-4 text-xl leading-loose">
         <section className=" text-6xl">👋</section>
         <section>
-          I'm Justin Hilliard. I like to work, surf, and drink coffee. I've done a few (self-proclaimed) interesting
+          I'm Justin Hilliard. I like to work, relax, and drink coffee. I've done a few (self-proclaimed) interesting
           things over the years. Feel free to reach out to me somewhere on the internet.
         </section>
         <ul className="space-y-2 text-lg font-medium">

@@ -21,7 +21,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <NavLink href={'/'}>About</NavLink>
         <NavLink href={'/products'}>Products</NavLink>
         <NavLink href={'/blog'}>Blog</NavLink>
-        <NavLink href={'/resume.pdf'}>Resume</NavLink>
+        <NavLink href={'/press'}>Press Kit</NavLink>
       </nav>
       {children}
       <footer className="sticky bottom-0 left-4 bg-stone-100 text-xl font-semibold md:fixed">
