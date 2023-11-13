@@ -66,7 +66,7 @@ export default function Products() {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const openLightbox = useCallback((event, { photo, index }) => {
+  const openLightbox = useCallback((_event: any, { photo, index }: any) => {
     setCurrentImage(index)
     setViewerIsOpen(true)
   }, [])
@@ -79,6 +79,7 @@ export default function Products() {
   return (
     <div>
       <Gallery photos={photos} onClick={openLightbox} />
+      {/* @ts-ignore */}
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
